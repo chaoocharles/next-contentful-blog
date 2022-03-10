@@ -53,7 +53,7 @@ const PostCard = ({ post }) => {
           flex: 1;
         }
         .date {
-          color: gray;
+          color: #b2b1b9;
           font-weight: bold;
         }
       `}</style>

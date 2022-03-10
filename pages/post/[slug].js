@@ -11,8 +11,6 @@ const Post = ({ post }) => {
 
   const { title, summary, content, thumbnail } = post.fields;
 
-  console.log("post", post);
-
   const renderOptions = {
     renderNode: {
       [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
@@ -41,6 +39,8 @@ const Post = ({ post }) => {
       },
     },
   };
+
+  if (!post) return <div>Getting content...</div>;
 
   return (
     <div className="blog-content">
@@ -118,6 +118,6 @@ export async function getStaticPaths() {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   };
 }
