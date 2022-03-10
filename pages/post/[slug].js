@@ -43,7 +43,7 @@ const Post = ({ post }) => {
   };
 
   return (
-    <>
+    <div className="blog-content">
       <button className="back-btn" onClick={() => router.back()}>
         Back
       </button>
@@ -65,6 +65,11 @@ const Post = ({ post }) => {
       </article>
 
       <style jsx>{`
+        .blog-content {
+          background: rgba(243, 244, 246, 1);
+          padding: 20px;
+          border-radius: 7px;
+        }
         .back-btn {
           cursor: pointer;
           outline: none;
@@ -73,12 +78,13 @@ const Post = ({ post }) => {
           padding: 7px 12px;
           border-radius: 3px;
           color: white;
+          margin-bottom: 2rem;
         }
         .thumbnail {
           margin: 20px 0;
         }
       `}</style>
-    </>
+    </div>
   );
 };
 

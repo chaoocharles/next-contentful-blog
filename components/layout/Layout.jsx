@@ -10,9 +10,6 @@ const Layout = ({ children }) => {
 
       <style jsx>
         {`
-          .container {
-            background: #f2f2f2;
-          }
           .content {
             min-height: calc(100vh - 190px);
             max-width: 750px;
