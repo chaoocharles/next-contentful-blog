@@ -40,7 +40,7 @@ const Post = ({ post }) => {
     },
   };
 
-  if (!post) return <div>Getting content...</div>;
+  if (!post) return <div>Loading...</div>;
 
   return (
     <div className="blog-content">
