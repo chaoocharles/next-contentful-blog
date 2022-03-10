@@ -7,9 +7,9 @@ import Highlight from "react-highlight";
 import "highlight.js/styles/a11y-dark.css";
 
 const Post = ({ post }) => {
-  if (!post) return <div>Loading...</div>;
-
   const router = useRouter();
+
+  if (!post) return <div>Loading...</div>;
 
   const { title, summary, content, thumbnail } = post.fields;
 
