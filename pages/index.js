@@ -12,7 +12,7 @@ export default function Home({ posts }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const client = createClient({
     space: process.env.SPACE,
     accessToken: process.env.ACCESS_TOKEN,
@@ -23,6 +23,7 @@ export async function getServerSideProps() {
   return {
     props: {
       posts: response.items,
+      revalidate: 1,
     },
   };
 }
